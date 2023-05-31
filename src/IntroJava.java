@@ -10,15 +10,11 @@ public class IntroJava {
         // System.out.print("Ingrese el segundo numero: ");
         b = Integer.parseInt(sc.nextLine());
 
-        if ((a % 2 != 0) || (b % 2 != 0)) 
-            System.exit(0);
-        
-
-        Operacion.suma(a, b);
-        Operacion.resta(a, b);
-        Operacion.multiplicacion(a, b);
-        Operacion.division(a, b);
-        
+        OperacionPares op = new OperacionPares(a,b);
+        op.suma();
+        op.resta();
+        op.multiplicacion();
+        op.division();
         sc.close();
 
     }

@@ -1,14 +1,25 @@
-public class Operacion {
-    public Operacion() {
+public class OperacionPares {
+
+    private int a, b;
+
+    // Constructor
+    public OperacionPares(int a, int b) {
+        if ((a % 2 != 0) || (b % 2 != 0)) {
+            this.a = 0;
+            this.b = 0;
+        }else{
+            this.a = a;
+            this.b = b;
+        }
+
+
         System.out.println("Operacion lista para trabajar..........");
     }
 
       /**
      * <b>division</b> Metodo que realiza la division de dos numeros
-     * @param a: numero entero
-     * @param b: numero entero
      */
-    public void division(int a, int b) {
+    public void division() {
         int c;
         if (b > 0){
         c= a / b;
@@ -20,10 +31,8 @@ public class Operacion {
 
     /**
      * <b>multiplicacion</b> Metodo que realiza la multiplicacion de dos numeros
-     * @param a: numero entero
-     * @param b: numero entero
      */
-    public void multiplicacion(int a, int b) {
+    public void multiplicacion() {
         int c;
         c= a * b;
         System.out.println("La multiplicacion es: " + c);
@@ -31,10 +40,8 @@ public class Operacion {
 
     /**
      * <b>resta</b> Metodo que realiza la resta de dos numeros
-     * @param a: numero entero
-     * @param b: numero entero
      */
-    public void resta(int a, int b) {
+    public void resta() {
         int c;
         c= a - b;
         System.out.println("La resta es: " + c);
@@ -42,18 +49,12 @@ public class Operacion {
 
     /**
      * <b>suma</b> Metodo que realiza la suma de dos numeros
-     * @param a: numero entero
-     * @param b: numero entero
      */
-    public void suma(int a, int b) {
+    public void suma() {
         int c;
         c= a+b;
         System.out.println("La suma es: " + c);
     }
-
-
-
-
 
 
 }
