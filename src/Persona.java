@@ -1,10 +1,21 @@
 public class Persona {
+
+    private char sexo;
     private String nombre;
     private int edad;
 
-    public int getEdad() {
-        return edad;
+    public Persona(char sexo) {
+        this.sexo = sexo;
     }
+
+    public char getSexo() {
+        return sexo;
+    }
+
+   
+    // public int getEdad() {
+    //     return edad;
+    // }
 
     public void setEdad(int edad) {
         this.edad = edad;
@@ -18,12 +29,9 @@ public class Persona {
         this.nombre = nombre.toUpperCase();
     }
 
-
-
-   
-
-   
-
+    public void decirEdad(){
+        System.out.println("I´m " + edad + " years old");
+    }
 
 
 

@@ -4,23 +4,30 @@ import java.util.Scanner;
 public class IntroJava {
     public static void main(String[] args) {
 
-        Mujer m = new Mujer();
-        Hombre h = new Hombre();
+        Mujer m = new Mujer('M');
+        Hombre h = new Hombre('H');
+        
+        // h.sexo = 'H';
+        // m.sexo = 'M';
 
         m.setNombre("Ana");
         h.setNombre("Ronny");
+        m.setEdad(0);
+        h.setEdad(0);
 
-        System.out.println(m.getNombre());
-        System.out.println(h.getNombre());
-
-
+       
+        System.out.println(m.getNombre() + " sexo "+ m.getSexo());
+        System.out.println(h.getNombre() + " sexo "+ h.getSexo());
+        m.setEdad(20);
+        h.setEdad(20);
+        m.decirEdad();
+        h.decirEdad();
 
         // var str = Arrays.toString(args);
 
         // if (!args[0].toString().equalsIgnoreCase("hello world")) {
         //     System.exit(0);
         // }
-
 
         // // int a = 0, b=0, c=0;
         // // Scanner sc = new Scanner(System.in);
@@ -38,6 +45,5 @@ public class IntroJava {
         // // sc.close();
 
     }
-
-  
+ 
 }
