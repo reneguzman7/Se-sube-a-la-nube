@@ -1,9 +1,35 @@
-import java.util.Arrays;
 import java.util.Scanner;
+import Utilitario.Utility;
 
 public class IntroJava {
     public static void main(String[] args) {
 
+        Utility u = new Utility();
+        // * * * 
+        // *   *
+        // * * * 
+
+        // *   *
+
+        int sizeFigure = u.getNumeroPositivo("Ingrese el tamaño de la figura: ");
+
+        for (int f = 1; f <= sizeFigure; f++) {
+            for (int c = 1; c <= sizeFigure; c++) {
+                if (f == 1 || c==1 || c == sizeFigure || f == sizeFigure) {
+                    System.out.print("* ");
+                } else {
+                    System.out.print(" ");
+                }
+
+            }
+            System.out.println("");
+        }
+
+        // explicacionHerencia();
+
+    }
+
+    private static void explicacionHerencia() {
         Mujer m = new Mujer('M');
         Hombre h = new Hombre('H');
         
@@ -43,7 +69,6 @@ public class IntroJava {
         // // op.multiplicacion();
         // // op.division();
         // // sc.close();
-
     }
  
 }
