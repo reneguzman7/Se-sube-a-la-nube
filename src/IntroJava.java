@@ -2,16 +2,17 @@ import java.util.Scanner;
 import Utilitario.Utility;
 
 public class IntroJava {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Utility u = new Utility();
         // * * * 
         // *   *
         // * * * 
 
-        // *   *
+        Utility.showLoadingBarra();
 
-        int sizeFigure = u.getNumeroPositivo("Ingrese el tamaño de la figura: ");
+        
+        int sizeFigure = Utility.getNumeroPositivo("Ingrese el tamaño de la figura: ");
 
         for (int f = 1; f <= sizeFigure; f++) {
             for (int c = 1; c <= sizeFigure; c++) {
@@ -23,7 +24,15 @@ public class IntroJava {
 
             }
             System.out.println("");
+
+
+            
+
         }
+
+
+
+
 
         // explicacionHerencia();
 
