@@ -21,25 +21,24 @@ public class Utility {
         return numero;       
     }
 
-        public static void showLoadingBarra() throws InterruptedException{
-            char[] barra = new char[20];
-            String str = "";
-            
-            for (int i = 0; i < 20; i++) 
-                str += " ";
+        public static void showLoadingBarra(int sizeBarra) throws InterruptedException{
+            char[] barra = new char[sizeBarra];         
+            float porcentaje = (float)100/(float)sizeBarra;
+            for (int i = 0; i < sizeBarra; i++) 
+                barra[i] = ' ';
 
-            for (int i = 0; i < 20; i++) {
-                
-                str = str + "#" + str.substring(i, str.length());
-
-                System.out.print(String.format("\r [%s] %3d %% ", str, i));
+            for (int i = 0; i <= sizeBarra; i++) {
+                if(i < sizeBarra-1)
+                    barra[i] = '#';
+                StringBuilder sbBarra = new StringBuilder("").append(barra);
+                System.out.print(String.format("\r [%s] %3.0f %% ", sbBarra, i*porcentaje));
 
                 Thread.sleep(delay);
             }
         }
             
         
-
+        // UNA LINEA
         public static void showLoading() throws InterruptedException { // posiciones en el array
             String strChar = "\\|/-"; // [ \ | / - |]
             for (int i = 0; i < 101; i++) {         

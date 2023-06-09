@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import Utilitario.ArrayString;
 import Utilitario.Utility;
 
 public class IntroJava {
@@ -9,10 +11,10 @@ public class IntroJava {
         // *   *
         // * * * 
 
-        Utility.showLoadingBarra();
+        // Utility.showLoadingBarra(30);
 
         
-        int sizeFigure = Utility.getNumeroPositivo("Ingrese el tamaño de la figura: ");
+        // int sizeFigure = Utility.getNumeroPositivo("Ingrese el tamaño de la figura: ");
 
         for (int f = 1; f <= sizeFigure; f++) {
             for (int c = 1; c <= sizeFigure; c++) {
@@ -24,13 +26,10 @@ public class IntroJava {
 
             }
             System.out.println("");
-
-
-            
-
         }
 
-
+        ArrayString a = new ArrayString();
+        a.ArraysFull();
 
 
 
