@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import Utilitario.ArrayString;
@@ -16,21 +17,40 @@ public class IntroJava {
         
         // int sizeFigure = Utility.getNumeroPositivo("Ingrese el tamaño de la figura: ");
 
-        for (int f = 1; f <= sizeFigure; f++) {
-            for (int c = 1; c <= sizeFigure; c++) {
-                if (f == 1 || c==1 || c == sizeFigure || f == sizeFigure) {
-                    System.out.print("* ");
-                } else {
-                    System.out.print(" ");
-                }
+        // for (int f = 1; f <= sizeFigure; f++) {
+        //     for (int c = 1; c <= sizeFigure; c++) {
+        //         if (f == 1 || c==1 || c == sizeFigure || f == sizeFigure) {
+        //             System.out.print("* ");
+        //         } else {
+        //             System.out.print(" ");
+        //         }
 
-            }
-            System.out.println("");
-        }
+        //     }
+        //     System.out.println("");
+        // }
 
         ArrayString a = new ArrayString();
         a.ArraysFull();
 
+        ArrayList<Mujer> listaMujeres = new ArrayList<>();
+
+        Mujer m1 = new Mujer('F',"Karen");
+        Mujer m2 = new Mujer('F',"Nahomy");
+        Mujer m3 = new Mujer('F',"Sara");
+
+        // System.out.println(m1.getNombre());
+        // System.out.println(m2.getNombre());
+        // System.out.println(m3.getNombre());
+
+        listaMujeres.add(m1);
+        listaMujeres.add(m2);
+        listaMujeres.add(m3);
+        listaMujeres.add(new Mujer('F', "Ana"));
+        m3.setNombre("Sarita");
+
+        for (Mujer mujer : listaMujeres) {
+            System.out.println(mujer.getNombre());
+        }
 
 
         // explicacionHerencia();
@@ -38,7 +58,7 @@ public class IntroJava {
     }
 
     private static void explicacionHerencia() {
-        Mujer m = new Mujer('M');
+        Mujer m = new Mujer('M', null);
         Hombre h = new Hombre('H');
         
         // h.sexo = 'H';

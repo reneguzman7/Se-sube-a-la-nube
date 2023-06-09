@@ -1,7 +1,8 @@
 public class Mujer extends Persona {   
 
-    public Mujer(char sexo) {
+    public Mujer(char sexo, String nombre) {
         super(sexo);
+        super.setNombre(nombre);
     }
 
     @Override
